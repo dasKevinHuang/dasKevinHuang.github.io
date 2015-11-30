@@ -1,16 +1,30 @@
 body
 {
-	background: url(imgs/bg.jpeg)
+	background: url(../imgs/bg.jpeg);
+	background-size: cover;
 }
 header
 {
+	margin-top: 20px;
+}
+h1{
 	font-family: "proxima-nova",sans-serif;
-	padding-left: 180px;
-	padding-right: 120px;
+	font-size: 40px;
+	color: #444;
+	text-transform: uppercase;
+}
+h1 span{
+	display: block;
+	margin-top: 10px;
+	font-size: 12px;
 }
 a
 {
      text-decoration: none;
+     color: dimgray;
+}
+a:hover{
+	color: #444;
 }
 ul
 {
@@ -19,45 +33,55 @@ ul
 nav ul li
 {
 	font-family: "freight-text-pro", "Georgia", serif;
+	font-size: 18px;
+	font-style: italic;
 	display: inline;
 	list-style-type: none;
-	padding-right: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 footer ul li
 {
 	display: inline;
 	list-style-type: none;
-	padding-right: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 #index-box{
-	height: 400px;
+	height: 410px;
 	width: 840px;
-	margin: 40px auto 0px auto;
+	margin: 100px auto 0px auto;
 	position: relative;
-	border-width: 15px;
+	border-width: 10px;
 	border-color: #FFB77D;
 	border-style: solid;
+	border-radius: 5px;
+	background-color: lightblue;
+	box-shadow: 0 2px 8px rgba(0,0,0,.25) inset;
 }
 
 .index-header-left{
-	float: left;
+	position:relative;
+	display: inline-block;
+	top: 10px;
+}
+
+.photo-circle{
 	border-radius:150px;
 }
-
-.index-header{
-	padding-top: 75px;
-	margin-bottom: 15px;
+.text-center{
+	padding: 0;
+	text-align: center;
+}
+.index-header-right{
+	position: relative;
+	display: inline-block;
+	top: -50px;
+	left: 30px;
 }
 main nav{
-	padding-top: 20px;
 	padding-bottom: 20px;
-	clear:left
 }
-
-main footer{
-	clear:left;
-}
-
 .social-btn{
 	height: 26px;
 	width: 26px;
