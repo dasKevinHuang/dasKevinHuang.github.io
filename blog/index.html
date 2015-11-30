@@ -6,107 +6,49 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
 </head>
-<style>
-body
-{
-    background-color: #92BABE;
-}
-a
-{
-     text-decoration: none;
-}
-ul
-{
-    list-style: none;
-}
-nav 
-{
-    font-family: "freight-text-pro", "Georgia", serif;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-nav ul li
-{
-    display: inline;
-    list-style-type: none;
-    padding-right: 40px;
-}
-article
-{
-    max-width: 1100px;
-    margin-left: 20%;
-    margin-right: 10%;
-}
-article ul li
-{
-    padding-bottom: 40px;
-}
-article a
-{
-    border-bottom: #FFB77D;
-    border-bottom-style: solid;
-    font-size: large;
-}
-h1
-{
-    font-family: "freight-text-pro", "Georgia", serif;
-    font-size: 50px;
-}
-p
-{
-    font-family: "proxima-nova",sans-serif;
-}
-footer
-{
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-footer ul li
-{
-    display: inline;
-    list-style-type: none;
-    padding-right: 20px;
-}
-</style>
 <body>
-	<nav>
-        <ul style="float: left">
-	    <li><b>Kevin Huang</b></li>
-        </ul>
-        <ul style="float: right">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="index.html">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        </ul>
-        <hr style="clear: both">
-	</nav>
-    <article>
-    	<header>
-	    <h1>Blog</h1>
-    	</header>
-        <ul>
-            <li><a href="#">Blog Post Title #7: The one trick for writing code in Ruby that you're missing out on</a></li>
-            <li><a href="#">Blog Post Title #6: Your doctor doesn't want you to know about this new way to write code</a></li>
-            <li><a href="#">Blog Post Title #5: 10 reasons why you need to read this blog post right now</a></li>
-            <li><a href="#">Blog Post Title #4: What does Star Wars have to do with Code?</a></li>
-            <li><a href="#">Blog Post Title #3: Code and the Codes of Morder</a></li>
-            <li><a href="#">Blog Post Title #2: Something, Something, and the Chamber of Something</a></li>
-            <li><a href="git.html">Week 1 (Version Control/git/GitHub)</a></li>
-        </ul>
-    </article>
+    <header class="container">
+    <div class="line">
+    	<nav class="left-nav">
+            <ul>
+    	    <li>Kevin Huang</li>
+            </ul>
+        </nav>
+        <nav class="right-nav">
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main class="container line">
+        <article class="content">
+        	<header>
+    	    <h1>Writing Code: An Unexpected Journey</h1>
+        	</header>
+            <ul>
+                <li><a href="#">Blog Post Title #7: The one trick for writing code in Ruby that you're missing out on</a></li>
+                <li><a href="#">Blog Post Title #6: Your doctor doesn't want you to know about this new way to write code</a></li>
+                <li><a href="#">Blog Post Title #5: 10 reasons why you need to read this blog post right now</a></li>
+                <li><a href="#">Blog Post Title #4: What does Star Wars have to do with Code?</a></li>
+                <li><a href="#">Blog Post Title #3: Code and the Codes of Mordor</a></li>
+                <li><a href="#">Blog Post Title #2: Something, Something, and the Chamber of Something</a></li>
+                <li><a href="git.html">Week 1: An introduction to the importance of Version Control, Git, and GitHub</a></li>
+            </ul>
+        </article>
+    </main>
     <footer>
-        <hr>
         <ul>
-        <li><a href="https://www.facebook.com/dasKevinHuang"><img src="../imgs/facebook.png" alt="Facebook" style="height: 26px;width: 26px;"></a></li>
-        <li><a href="https://twitter.com/daskevinhuang"><img src="../imgs/twitter.png" alt="Twitter" style="height: 26px;width: 26px;"></a></li>
-        <li><a href="https://www.linkedin.com/in/daskevinhuang"><img src="../imgs/linkedin.png" alt="LinkedIn" style="height: 26px;width: 26px;"></a></li>
-        <li><a href="https://github.com/dasKevinHuang"><img src="../imgs/github.png" alt="Github" style="height: 26px;width: 26px;"></a></li>
-        <li><a href="https://plus.google.com/114387115151140688910"><img src="../imgs/googleplus.png" alt="Google Plus"style="height: 26px;width: 26px;"></a></li>
+        <li><a href="https://www.facebook.com/dasKevinHuang"><img class="social-btn" src="../imgs/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://twitter.com/daskevinhuang"><img class="social-btn" src="../imgs/twitter.png" alt="Twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/daskevinhuang"><img class="social-btn" src="../imgs/linkedin.png" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/dasKevinHuang"><img class="social-btn" src="../imgs/github.png" alt="Github"></a></li>
+        <li><a href="https://plus.google.com/114387115151140688910"><img class="social-btn" src="../imgs/googleplus.png" alt="Google Plus"></a></li>
         </ul>
     </footer>
 </body>
