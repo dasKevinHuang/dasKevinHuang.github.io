@@ -1,15 +1,19 @@
+/* body reset */
+
 body{
 	margin: 0;
 	padding: 0;
 }
-.index-bg
+
+/* links & type */
+
+a
 {
-	background: url(../imgs/bg.jpeg);
-	background-size: cover;
+     text-decoration: none;
+     color: dimgray;
 }
-header.index-header
-{
-	margin-top: 20px;
+a:hover{
+	color: #444;
 }
 h1{
 	font-family: "proxima-nova",sans-serif;
@@ -21,14 +25,19 @@ h1 span{
 	margin-top: 10px;
 	font-size: 12px;
 }
-a
+
+/* layout */
+
+body.index-bg
 {
-     text-decoration: none;
-     color: dimgray;
+	background: url(../imgs/bg.jpeg);
+	background-size: cover;
 }
-a:hover{
-	color: #444;
+header.index-header
+{
+	margin-top: 20px;
 }
+
 ul
 {
 	list-style: none;
@@ -43,13 +52,6 @@ nav ul li
 	padding-left: 20px;
 	padding-right: 20px;
 }
-footer ul li
-{
-	display: inline;
-	list-style-type: none;
-	padding-left: 10px;
-	padding-right: 10px;
-}
 #index-box{
 	height: 410px;
 	width: 840px;
@@ -62,19 +64,14 @@ footer ul li
 	background-color: lightblue;
 	box-shadow: 0 2px 8px rgba(0,0,0,.25) inset;
 }
-
+.text-center{
+	padding: 0;
+	text-align: center;
+}
 .index-header-left{
 	position:relative;
 	display: inline-block;
 	top: 10px;
-}
-
-.photo-circle{
-	border-radius:150px;
-}
-.text-center{
-	padding: 0;
-	text-align: center;
 }
 .index-header-right{
 	position: relative;
@@ -82,8 +79,18 @@ footer ul li
 	top: -50px;
 	left: 30px;
 }
+.photo-circle{
+	border-radius:150px;
+}
 main nav{
 	padding-bottom: 20px;
+}
+footer ul li
+{
+	display: inline;
+	list-style-type: none;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .social-btn{
 	height: 26px;
