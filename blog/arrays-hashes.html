@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blog 3 (Arrays and Hashes</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+<body>
+    <header class="container">
+    <div class="line">
+      <nav class="left-nav">
+            <ul>
+          <li>Kevin Huang</li>
+            </ul>
+        </nav>
+        <nav class="right-nav">
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main class="container line">
+    <article>
+      <header>
+      <h1>Writing Code #3: Arrays and Hashes
+        <span>December 5, 2015</span>
+      </h1>
+      </header>
+        <p>
+        When you just starting out learning how to program (like I am) you will encounter <b>arrays</b> and <b>hashes</b>. These two types of collections of objects are especially important in learning how to write competent code, so pay attention to how they work! Let's review the properties of arrays and hashes.
+        </p>
+        <h4>
+        What's an array again?
+        </h4>
+        <p>        
+        <pre>
+        <code>
+        //Here are some examples of arrays in code.
+
+        //Declares an empty array
+        
+        array_1 = []
+
+        //Defines an array with 2, 3, 4, 5 inside.
+        
+        array_2 = [2, 3, 4, 5]
+
+        //Using an index to access element 3 of array_2
+        //Note how index numbers start from 0, not 1.
+        
+        puts array_2[2]
+
+        //This outputs 4
+        </code>
+        </pre>
+        Arrays are structured as a collection of elements, with each element being identified by an index number. Array indices begin with the number 0. 
+        </p>
+        <p>
+        Array elements contain the actual values that are inside the array. Array elements can be manipulated with code. You can also use an index to point to a specific element in an array.</p>
+        <h4>
+        What's a hash then?
+        </h4>
+        <p>
+        <pre>
+        <code>
+        //Here are some examples of hashes in code.
+
+        //Declares an empty hash
+        
+        blah = {}
+
+        //Defines key-value pairs for the hash
+
+        blah[name] = "Not My Real Name"
+        blah[power_level] = "Over 9000"
+        </code>
+        </pre>
+        A hash is data structure that is sort of like an array, however instead of relying on index numbers to point to specific elements, hashes use hash keys. Hash elements actually come in 2 parts called key-value pairs. The hash key is the part that identifies a specific hash value, and the hash value of course is the value itself.
+        </p>
+        <h4>
+        What's so special about a hash?
+        </h4>
+        <p>It's important to know that with hash keys, order isn't as importantas when dealing with arrays. While in arrays order is important, with hash keys, it's the hash pairs that are important. When dealing with hashes, you have to be careful with accessing the a value with the correct key.</p>
+        <p>
+        Another interesting aspect to hash keys that is different from arrays is that hash keys must be unique. This is especially important since order doesn't matter as much as with arrays when dealing with hash. So the hash key you assign must be unique.
+        </p>
+        <h4>
+        What's the difference between an array and a hash?
+        </h4>
+        <p>
+        The main differences between arrays and hashes are that for:<br>
+        Arrays <br> 
+        + Order is very important.<br>
+        + Allows for copies of the same thing.<br><br>
+        Hashes:<br>
+        + Hash keys must be unique. <br>
+        + No duplicate hash keys are allowed.<br><br>
+        To illustrate this, take a look at what arrays can do:
+        <pre>
+        <code>
+        a = [1, 1, 1, 2]
+        </code>
+        </pre>
+        Do you see how arrays can hold multiple copies of the same thing?
+        Now let's take a look at when we try this with a hash:
+        <pre>
+        <code>
+        blah = {}
+        blah[:a] = "A"
+        blah[:a] = "B"
+        </code>
+        </pre>
+        Did you catch what happens with this code?<br>
+        The 3rd line actually overwrites the previous value of this key-value pair, since hash keys are unique.
+        </p>
+    </article>
+    </main>
+    <footer>
+        <ul>
+        <li><a href="https://www.facebook.com/dasKevinHuang"><img class="social-btn" src="../imgs/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://twitter.com/daskevinhuang"><img class="social-btn" src="../imgs/twitter.png" alt="Twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/daskevinhuang"><img class="social-btn" src="../imgs/linkedin.png" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/dasKevinHuang"><img class="social-btn" src="../imgs/github.png" alt="Github"></a></li>
+        <li><a href="https://plus.google.com/114387115151140688910"><img class="social-btn" src="../imgs/googleplus.png" alt="Google Plus"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
