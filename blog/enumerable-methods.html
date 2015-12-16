@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blog 4 (Enumerable Methods)</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+<body>
+    <header class="container">
+    <div class="line">
+      <nav class="left-nav">
+            <ul>
+          <li>Kevin Huang</li>
+            </ul>
+        </nav>
+        <nav class="right-nav">
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main class="container line">
+    <article>
+      <header>
+      <h1>Writing Code #4: Enumerable#map
+        <span>December 5, 2015</span>
+      </h1>
+      </header>
+        <p>
+        When you are just starting out learning how to program (like I am) you will encounter <b>arrays</b> and <b>hashes</b>. These two types of collections of objects are especially important in learning how to write competent code, so pay attention to how they work! Let's review the properties of arrays and hashes.
+        </p>
+        <h4>
+        What is <code>map</code>? Why bother using it?
+        </h4>
+        <p>
+        <code>map</code> is a method that returns a new array based on the running code block pass into #map. <code>map</code> is important because it makes it easy to create a new array from an object depending on what you would like to do with it.
+        </p>
+        <p>
+        To better help you understand how #map works, you could compare it to something at it definitely is not: <code>each</code>. <code>each</code> on the other hand, does NOT return a new array and will simply iterate over each element of an array using the running block. So if you are writing code using <code>each</code> and expect it to return a new array, it simply will not do it - unless you modify the original array.
+        </p>
+        <p>
+        This is where <code>map</code> comes in handy! Since <code>map</code> returns a new array based on the running block, you can be assured that a newly modified array based on your requirements will greet you after running it!
+        </p>
+        <p>
+        To visualize this difference here is an example of each method:  
+        <pre>
+        <code>
+        a = [5, 6, 7, 8]
+        a.each {|x| x - 5}
+        
+        // This will return the original array, unmodified - essentially doing nothing.
+        // [5, 6, 7, 9]
+
+        a = [5, 6, 7, 8]
+        a.map {|x| x - 5}
+
+        // This will return a NEW array
+        // [0, 1, 2, 3]
+        </code>
+        </pre>
+        </p>
+    </article>
+    </main>
+    <footer>
+        <ul>
+        <li><a href="https://www.facebook.com/dasKevinHuang"><img class="social-btn" src="../imgs/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://twitter.com/daskevinhuang"><img class="social-btn" src="../imgs/twitter.png" alt="Twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/daskevinhuang"><img class="social-btn" src="../imgs/linkedin.png" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/dasKevinHuang"><img class="social-btn" src="../imgs/github.png" alt="Github"></a></li>
+        <li><a href="https://plus.google.com/114387115151140688910"><img class="social-btn" src="../imgs/googleplus.png" alt="Google Plus"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
