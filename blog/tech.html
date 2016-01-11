@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SQL Injection</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+<body>
+    <header class="container">
+    <div class="line">
+      <nav class="left-nav">
+            <ul>
+          <li>Kevin Huang</li>
+            </ul>
+        </nav>
+        <nav class="right-nav">
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main class="container line">
+    <article>
+      <header>
+      <h1>SQL Injection And Why It's Dangerous (And How To Prevent It!)
+        <span>January 10, 2016</span>
+      </h1>
+      </header>
+      <h2>
+      What is SQL Injection? Why is it so dangerous?
+      </h2>
+      <p>
+          SQL injection is a type of security vulnerability in web applications that occurs when an intruder has the ability to enter an SQL database command that directly interacts with the backend of the application. An attack using this method can occur when inputs taken from the user without safely validating the inputs without encoding them as database commands or queries.
+      </p>
+      <p>
+          When an attacker manages to use SQL injection on a web application, the attacker uses an input to manipulate the application into carrying out commands that otherwise would not be available to regular users. SQL injection could allow an intruder to read, change, or delete data stored in the database. Sensitive information that might be stored in databases, such as personal information, home addresses, social security numbers, etc, are all at risk from SQL injection atacks.
+      </p>
+      <h2>
+          How common are SQL injection attacks?
+      </h2>
+      <p>
+          SQL injection attacks account for more than 20% of ALL web vulnerabilities, making it one of the most common security vulnerabilities in software. 
+      </p>
+      <h2>
+          What does a SQL injection attack look like?
+      </h2>
+      <p>
+          SQL injection attacks can vary depending on the specifc conditions an attacker might be working against in an application. For attacking a simple email database, an attacker might realize that the inputs for emails are not sanitized (meaning they are not properly validated to prevent invalid inputs) by testing the following email:
+          <pre>
+              <code>
+                  blah@thisisnotarealemail.com'
+              </code>
+          </pre>
+          Now when the database attempts to select data for this email address (and unsanitized input), the system will think the single quotation mark at the end of the input is the end of the string such that:
+          <pre>
+              <code>
+                  SELECT data 
+                    FROM table
+                        WHERE email_input = 'blah@thisisnotarealemail.com'';
+              </code>
+          </pre>
+          Since now the syntax is invalid, the database will abort the command. Depending on how the application handles this error realtime, the attacker may be able to determine that application is failing to sanitize inputs.
+      </p>
+      <p>
+          Now that the attacker has determined that the inputs are not being sanitized when processed, they can move on toward forming the actual attack. To write an SQL injection attack, the attacker would simply write a command for the database to fulfill. An example input for the above scenario could look like:
+          <pre>
+              <code>
+                       x';
+                            UPDATE table
+                            SET email = 'attacker@hack.com'
+                            WHERE email = 'victim@mail.com';
+              </code>
+          </pre>
+          When the attacker places this input into the application, it will complete the code to fulfill a SQL injection attack that would look like this:
+          <pre>
+              <code>
+                  SELECT data 
+                    FROM table
+                        WHERE email_input = 'x';
+                    UPDATE table
+                    SET email = 'attacker@hack.com'
+                    WHERE email = 'victim@mail.com';
+              </code>
+          </pre>
+          What does this do? It resets the victim's email address and sets it to the hacker's own email address! With this set in place, the attacker might be able to reset the password for the victim's account and gain complete access. Actual SQL injection attacks will look more complex than these few steps, however the premise follows the general idea of how an SQL injection happens. This is why preventing SQL injection is important!
+      </p>
+      <h2>
+          How can you prevent SQL injection attacks?
+      </h2>
+      <p>
+          You can prevent SQL injection attacks by following strict input validation techniques for all user input. This would ensure that any user input is validated and authenticated against strong rules for length, syntax, and types.
+      </p>
+      <p>
+          Another best practice for preventing SQL injection attacks is to properly set permissions to the database. Users who have access to the database should have the least amount of privileges set. Common system administrator account names should also be avoided to ensure that they are not infiltrated.
+      </p>
+    </article>
+    </main>
+    <footer>
+        <ul>
+        <li><a href="https://www.facebook.com/dasKevinHuang"><img class="social-btn" src="../imgs/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://twitter.com/daskevinhuang"><img class="social-btn" src="../imgs/twitter.png" alt="Twitter"></a></li>
+        <li><a href="https://www.linkedin.com/in/daskevinhuang"><img class="social-btn" src="../imgs/linkedin.png" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/dasKevinHuang"><img class="social-btn" src="../imgs/github.png" alt="Github"></a></li>
+        <li><a href="https://plus.google.com/114387115151140688910"><img class="social-btn" src="../imgs/googleplus.png" alt="Google Plus"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>
